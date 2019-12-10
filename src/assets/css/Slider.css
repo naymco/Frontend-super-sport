@@ -1,0 +1,25 @@
+.slider {
+  background: #18165b;
+  height: 200px;
+  width: 100%;
+  font-weight: 200;
+  text-align: center;
+  display: block;
+  align-items: center;
+  color: white;
+  padding-top: 10%;
+}
+
+.slider h1 {
+  font-weight: 200;
+  font-size: 50px;
+}
+
+.slider a {
+  text-decoration: none;
+  color: white;
+  transition: 0.5s;
+}
+.slider a:hover {
+  color: red;
+}
