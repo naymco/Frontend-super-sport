@@ -1,24 +1,17 @@
 import React, { Component } from "react";
 
 class Home extends Component {
-  // constructor() {
-  //   super();
-  //   this.state = { productos: [] };
-  // }
-  // componentDidMount() {
-  //   axios
-  //     .get(`http://localhost:3001/productos`)
-  //     .then(items => {
-  //       const productos = items.data;
+  constructor(props){
+    super(props);
 
-  //       this.setState({ productos });
-  //     })
-  //     .catch(error => console.log(error));
-  // }
+    this.state ={
+      productos: 
+    }
+  }
   render() {
     return (
       <div>
-        <p>Nombre: {this.props.nombre}</p>
+        <p>Nombre: {this.props.productos}</p>
       </div>
     );
   }
