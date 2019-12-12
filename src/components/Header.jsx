@@ -15,6 +15,14 @@ class Header extends Component {
               <Link to="/products">Productos</Link>
             </li>
             <li>Contacto</li>
+            <div className="regLogin">
+              <li>
+                <span>Regístrate</span>{" "}
+              </li>
+              <li>
+                <span>Iniciar Sesión</span>{" "}
+              </li>
+            </div>
           </ul>
         </nav>
         <header></header>

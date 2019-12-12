@@ -29,7 +29,16 @@ class App extends Component {
         <Header />
         <Slider />
         <div className="container">
-          <p>Nombre: {this.props.nombre}</p>
+          {this.state.productos.map(item => {
+            return (
+              <div key={item.id} className="items-productos">
+                <img src={item.img_url} alt="poster" />
+                <p>{item.nombre}</p>
+                <p>{item.descripcion} </p>
+                <p> {item.precio}€ </p>
+              </div>
+            );
+          })}
         </div>
 
         <Footer />

@@ -7,12 +7,19 @@
   width: 100%;
 }
 .menu {
-  height: 50px;
   display: flex;
   align-items: center;
+  height: 50px;
   list-style: none;
   font-weight: 400;
 }
 li {
   padding: 10px;
+}
+
+.regLogin {
+  list-style: none;
+  display: flex;
+  width: 30%;
+  margin-left: auto;
 }

@@ -6,6 +6,19 @@
   font-family: "Raleway", sans-serif;
 }
 
+body {
+  background: #000000;
+  background: -webkit-linear-gradient(to top, #434343, #000000);
+  background: linear-gradient(to top, #434343, #000000);
+}
+
 .container {
-  height: 80vh;
+  display: grid;
+  height: 80%;
+  grid-template: repeat(2, 2fr) / repeat(2, 1fr);
+  padding: 10px;
+}
+
+.items-productos {
+  border: 1px solid #1b1b1b;
 }
