@@ -1,18 +1,37 @@
 .navbar {
   padding: 0 120px;
-  background: #d7d7d7;
+  background: #2c59a7;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
+  border-bottom: 2px solid white;
+  color: white;
 }
 .menu {
-  height: 50px;
   display: flex;
   align-items: center;
+  height: 50px;
   list-style: none;
   font-weight: 400;
 }
-li {
+nav li {
   padding: 10px;
+}
+
+.regLogin {
+  list-style: none;
+  display: flex;
+  width: 30%;
+  margin-left: auto;
+}
+
+.Link {
+  text-decoration: none;
+  color: white;
+  transition: 0.5s;
+}
+
+.Link:hover {
+  color: rgb(255, 138, 103);
 }

@@ -1,19 +1,15 @@
-import React, { Component, Fragment } from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import React, { Component } from "react";
 import axios from "axios";
 
 import Header from "../components/Header.jsx";
 import Footer from "../components/Footer.jsx";
 import Slider from "../components/Slider.jsx";
-//import Login from "../components/Login.jsx";
 
-import Home from "../pages/Home";
-import Products from "../pages/Products";
 import "./App.css";
 
 class App extends Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
     this.state = { productos: [] };
   }
   componentDidMount() {
@@ -21,7 +17,7 @@ class App extends Component {
       .get(`http://localhost:3001/productos`)
       .then(items => {
         const productos = items.data;
-
+        console.log(productos);
         this.setState({ productos });
       })
       .catch(error => console.log(error));
@@ -29,24 +25,25 @@ class App extends Component {
 
   render() {
     return (
-      <Router>
-        <Fragment>
-          <Header />
-          <Slider />
-          <div>
-            {" "}
-            {this.state.productos.map(item => (
-              <Home key={item.id} data={item} />
-            ))}
-          </div>
-          <div className="container">
-            <Route exact path="/" component={Home} />
-            <Route path="/products" component={Products} />
-          </div>
+      <div>
+        <Header />
+        <Slider />
+        <div className="container">
+          {this.state.productos.map(item => {
+            return (
+              <div key={item.id} className="items-productos">
+                <img className="imagen" src={item.img_url} alt="poster" />
+                <div className="detalleProducto">
+                  <h2>{item.nombre}</h2>
+                  <p className="precio"> {item.precio}€ </p>
+                </div>
+              </div>
+            );
+          })}
+        </div>
 
-          <Footer />
-        </Fragment>
-      </Router>
+        <Footer />
+      </div>
     );
   }
 }
