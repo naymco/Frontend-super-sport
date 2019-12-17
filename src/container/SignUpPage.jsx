@@ -3,7 +3,6 @@ import { SignUpForm } from "./SignUpForm.jsx";
 import AuthApi from "./authRepository";
 import "../assets/css/SignUp.css";
 import Header from "../components/Header.jsx";
-import Footer from "../components/Footer.jsx";
 
 class SignUpPage extends Component {
   constructor(props) {
@@ -51,7 +50,6 @@ class SignUpPage extends Component {
             onSubmit={this.onSubmit}
           />
         </div>
-        <Footer />
       </Fragment>
     );
   }

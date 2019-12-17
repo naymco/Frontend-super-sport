@@ -9,7 +9,7 @@ const getLocalToken = () => {
 const productsRepository = () => {
   let urlBack = "http://localhost:3001/productos";
 
-  const newProduct = () => {
+  const newProduct = product => {
     return new Promise((resol, rej) => {
       const instance = axios.create({
         baseURL: urlBack,
@@ -20,7 +20,7 @@ const productsRepository = () => {
       });
 
       instance
-        .post("", product)
+        .post("/addProduct", product)
         .then(res => {
           resol(res.data);
         })
@@ -31,7 +31,7 @@ const productsRepository = () => {
     });
   };
 
-  const getProduct = () => {
+  const getProduct = product => {
     return new Promise((resol, rej) => {
       const instance = axios.create({
         baseURL: urlBack,
@@ -41,7 +41,7 @@ const productsRepository = () => {
         }
       });
       instance
-        .get()
+        .get("/productos", product)
         .then(res => resol(res.data))
         .catch(error => {
           console.log(error);
@@ -49,7 +49,7 @@ const productsRepository = () => {
         });
     });
   };
-  const updateProduct = () => {
+  const updateProduct = product => {
     return new Promise((resol, rej) => {
       const instance = axios.create({
         baseURL: urlBack,

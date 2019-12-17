@@ -3,7 +3,7 @@ import React, { Component, Fragment } from "react";
 import { LoginForm } from "./LoginForm";
 import AuthApi from "./authRepository";
 import Header from "../components/Header";
-import Footer from "../components/Footer";
+
 
 import "../assets/css/SignUp.css";
 
@@ -50,7 +50,6 @@ class LoginPage extends Component {
             onSubmit={this.onSubmit}
           />
         </div>
-        <Footer />
       </Fragment>
     );
   }

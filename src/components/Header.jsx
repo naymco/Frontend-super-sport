@@ -9,18 +9,26 @@ class Header extends Component {
         <nav className="navbar">
           <ul className="menu">
             <li>
-              <Link to="/">Home</Link>
+              <Link to="/" className="Link">
+                Home
+              </Link>
             </li>
             <li>
-              <Link to="/products">Productos</Link>
+              <Link to="/productos" className="Link">
+                Productos
+              </Link>
             </li>
             <li>Contacto</li>
             <div className="regLogin">
               <li>
-                <span>Regístrate</span>{" "}
+                <Link to="/auth/register" className="Link">
+                  <span>Regístrate</span>
+                </Link>
               </li>
               <li>
-                <span>Iniciar Sesión</span>{" "}
+                <Link to="/auth/login" className="Link">
+                  <span>Iniciar Sesión</span>
+                </Link>
               </li>
             </div>
           </ul>

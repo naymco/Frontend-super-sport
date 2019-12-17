@@ -4,13 +4,9 @@ const authRepository = () => {
   //let debug = true;
 
   let urlBack = "http://localhost:3001/auth";
-  //let urlUser = "http://localhost:3001/auth/perfil";
 
   const tokenName = "token";
-
-  // const getLocalToken = () => {
-  //   return JSON.parse(localStorage.getItem(tokenName));
-  // };
+  const userStore = "user";
 
   const login = user => {
     return new Promise((resol, rej) => {
@@ -25,8 +21,9 @@ const authRepository = () => {
         .post("login/", user)
         .then(res => {
           localStorage.setItem(tokenName, JSON.stringify(res.data.token));
+          localStorage.setItem(userStore, JSON.stringify(res.data.user));
           resol(res.data);
-          console.log(res.data.token);
+          console.log(res.data.user);
         })
         .catch(error => {
           console.log(error);
@@ -41,7 +38,6 @@ const authRepository = () => {
         baseURL: urlBack,
         headers: {
           "Content-Type": "application/json"
-          //Authorization: "Token " + getLocalToken()
         }
       });
       instance
@@ -69,7 +65,7 @@ const authRepository = () => {
       instance
         .post("logout/", {})
         .then(res => {
-          localStorage.removeItem(tokenName);
+          localStorage.removeItem(tokenName, userStore);
           resol(res.data);
         })
         .catch(error => {

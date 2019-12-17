@@ -1,0 +1,106 @@
+.adminContent {
+  display: flex;
+  margin: auto;
+}
+
+.adminPanel {
+  background: white;
+  display: block;
+  margin: auto;
+  width: 100%;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.adminPanel input[type="text" i] {
+  width: 90%;
+  height: 20px;
+  padding: 10px;
+  border-radius: 50px;
+  border: 1px solid #d7d7d7;
+}
+
+.adminPanel label {
+  display: block;
+  padding: 10px;
+  text-align: left;
+}
+
+.botones {
+  display: flex;
+  margin: auto;
+}
+
+.adminPanel input[type="submit"] {
+  margin: 20px auto;
+  padding: 10px 50px;
+  border-radius: 50px;
+  transition: 0.5s;
+}
+
+.adminPanel input[type="submit"]:hover {
+  background: #333333;
+  color: white;
+  border: 2px solid #a7a7a7;
+}
+.botones {
+  margin: auto;
+}
+.buttons {
+  margin: 20px auto;
+  padding: 10px 50px;
+  border-radius: 50px;
+  transition: 0.5s;
+}
+.buttons:hover {
+  background: #333333;
+  color: white;
+  border: 2px solid #a7a7a7;
+}
+
+.adminForm {
+  display: block;
+  border-right: 1px solid #a7a7a7;
+  width: 100%;
+}
+.titleAdmin {
+  text-align: center;
+  padding: 20px;
+  width: 70%;
+  margin: 10px auto;
+  border-bottom: 1px solid #d7d7d7;
+}
+
+.inputs {
+  display: grid;
+  grid-template-columns: repeat(2, 2fr);
+  height: 500px;
+}
+.adminContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  overflow: auto;
+}
+
+.adminProducto {
+  display: flex;
+  padding-right: 10px;
+  justify-content: space-between;
+}
+
+.adminContainer button {
+  text-align: left;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 5px 8px;
+  border-bottom: 1px solid #e2e2e2;
+}
+
+.adminContainer button:hover {
+  background: #a7a7a7;
+  color: white;
+  border-radius: 50px;
+}

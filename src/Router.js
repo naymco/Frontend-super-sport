@@ -1,10 +1,10 @@
 import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 
-import Products from "./container/Products";
-//import Registro from "./container/Registro";
 import SignUpPage from "./container/SignUpPage.jsx";
 import LoginPage from "./container/LoginPage";
+import Categoria from "./container/Categorias";
+import GestorInvProd from "./container/admin/gestorInveProd";
 import App from "./container/App";
 
 function Router() {
@@ -12,7 +12,8 @@ function Router() {
     <BrowserRouter>
       <Switch>
         <Route exact path="/" component={App} />
-        <Route path="/products" component={Products} />
+        <Route path="/productos" component={GestorInvProd} />
+        <Route path="/categoria" component={Categoria} />
         <Route path="/auth/register" component={SignUpPage} />
         <Route path="/auth/login" component={LoginPage} />
       </Switch>

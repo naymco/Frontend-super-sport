@@ -32,10 +32,11 @@ class App extends Component {
           {this.state.productos.map(item => {
             return (
               <div key={item.id} className="items-productos">
-                <img src={item.img_url} alt="poster" />
-                <p>{item.nombre}</p>
-                <p>{item.descripcion} </p>
-                <p> {item.precio}€ </p>
+                <img className="imagen" src={item.img_url} alt="poster" />
+                <div className="detalleProducto">
+                  <h2>{item.nombre}</h2>
+                  <p className="precio"> {item.precio}€ </p>
+                </div>
               </div>
             );
           })}

@@ -1,14 +1,15 @@
 .contenedor {
-  background-image: url("../img/backRegLogin.png");
-  background-position: center center;
-  background-size: cover;
   color: white;
   width: 40%;
-  margin: 100px auto;
+  margin: 150px auto;
   display: block;
   border-radius: 10px;
   box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.61);
+  box-shadow: inset 122px 141px 300px 76px rgba(0, 0, 0, 0.75);
   border: 2px solid white;
+  background-image: url("../img/backRegLogin.png");
+  background-position: center center;
+  background-size: cover;
 }
 
 .form {
@@ -17,8 +18,8 @@
   padding: 40px 0;
 }
 
-input[type="text" i],
-input[type="password" i] {
+.form input[type="text" i],
+.form input[type="password" i] {
   display: block;
   margin: auto;
   width: 80%;
@@ -41,7 +42,7 @@ input[type="password" i] {
   text-align: left;
 }
 
-input[type="submit" i] {
+.form input[type="submit" i] {
   background: #222222;
   display: block;
   color: white;
@@ -58,13 +59,22 @@ input[type="submit" i] {
   padding: 10px;
   font-size: 13px;
   text-align: center;
-  opacity: 0.8;
 }
 
-input[type="submit" i]:hover {
+.form input[type="submit" i]:hover {
   background: #17ae17;
   color: white;
   border: 2px solid white;
+}
+.form input:-webkit-autofill,
+.form input:-webkit-autofill:hover,
+.form input:-webkit-autofill:focus,
+.form input:-webkit-autofill:active {
+  box-shadow: 0 0 0 30px #1d1d1d inset !important;
+}
+
+.form input:-webkit-autofill {
+  -webkit-text-fill-color: rgb(255, 255, 255) !important;
 }
 h1.title {
   padding-top: 30px;
