@@ -1,0 +1,57 @@
+.detalles-producto {
+  /* background: url("../img/loginyReg.jpg") no-repeat;
+  background-position: top;
+  background-size: cover; */
+
+  display: flex;
+  margin: 80px 120px;
+  padding: 20px 40px;
+  text-align: left;
+
+  /* box-shadow: inset 127px 120px 210px 37px rgba(0, 0, 0, 0.75); */
+}
+.imagen-titulo {
+  padding: 20px;
+}
+.imagen-titulo img {
+  /* box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.483); */
+  padding: 10px;
+
+  width: 90%;
+  text-align: center;
+}
+
+.detalles {
+  margin: auto;
+  width: 50%;
+  padding: 10% 28px;
+  border-left: 1px solid rgb(193, 193, 193);
+  /* box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.469); */
+}
+
+.detalles p {
+  padding: 10px;
+}
+
+.detalles .precio {
+  font-size: 25px;
+}
+
+.añadirCarrito {
+  background: #434343;
+  color: white;
+  padding: 10px;
+  border-radius: 50px;
+  border: 2px solid #2c2c2c;
+  cursor: pointer;
+  margin: 10px;
+  text-align: center;
+  transition: 0.5s;
+  box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.61);
+}
+
+.añadirCarrito:hover {
+  background: #17ae17;
+  color: white;
+  border: 2px solid white;
+}

@@ -6,7 +6,7 @@ const authRepository = () => {
   let urlBack = "http://localhost:3001/auth";
 
   const tokenName = "token";
-  const userStore = "user";
+  const userStore = "users";
 
   const login = user => {
     return new Promise((resol, rej) => {
@@ -20,6 +20,7 @@ const authRepository = () => {
       instance
         .post("login/", user)
         .then(res => {
+          console.log(user);
           localStorage.setItem(tokenName, JSON.stringify(res.data.token));
           localStorage.setItem(userStore, JSON.stringify(res.data.user));
           resol(res.data);

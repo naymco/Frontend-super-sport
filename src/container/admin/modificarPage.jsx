@@ -85,6 +85,7 @@ class ModicarPage extends Component {
   render() {
     return (
       <Fragment>
+        
         <div className="adminContent">
           <Sidebar />
           <div className="adminPanel">

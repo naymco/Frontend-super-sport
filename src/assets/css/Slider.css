@@ -17,20 +17,3 @@
   font-size: 50px;
   margin: 20px;
 }
-
-.slider a {
-  text-decoration: none;
-  color: white;
-
-  padding: 10px 8%;
-  text-transform: uppercase;
-  font-weight: 700;
-  box-shadow: inset 122px 141px 300px 76px rgba(0, 0, 0, 0.65);
-  border: 2px solid white;
-  border-radius: 50px;
-  width: 100%;
-  transition: 0.5s;
-}
-.slider a:hover {
-  color: red;
-}
