@@ -7,9 +7,11 @@
 }
 
 body {
-  background: #000000;
+  background: #ffffff;
+
+  /* background: #000000;
   background: -webkit-linear-gradient(to top, #434343, #000000);
-  background: linear-gradient(to top, #434343, #000000);
+  background: linear-gradient(to top, #434343, #000000); */
   min-height: 85vh;
 }
 
@@ -45,4 +47,23 @@ body {
 
 .precio {
   font-size: 40px;
+}
+
+.btn-detalle-producto {
+  background: #434343;
+  color: white;
+  padding: 10px;
+  border-radius: 50px;
+  border: 2px solid #2c2c2c;
+  cursor: pointer;
+  margin: 10px;
+  text-align: center;
+  transition: 0.5s;
+  box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.61);
+}
+
+.btn-detalle-producto:hover {
+  background: #17ae17;
+  color: white;
+  border: 2px solid white;
 }

@@ -42,13 +42,15 @@ class SignUpPage extends Component {
     return (
       <Fragment>
         <Header />
-        <div className="contenedor">
-          <h1 className="title">Regístrate</h1>
-          <SignUpForm
-            user={this.state.user}
-            onChange={this.onChange}
-            onSubmit={this.onSubmit}
-          />
+        <div className="contenedor-principal">
+          <div className="contenedor">
+            <h1 className="title">Regístrate</h1>
+            <SignUpForm
+              user={this.state.user}
+              onChange={this.onChange}
+              onSubmit={this.onSubmit}
+            />
+          </div>
         </div>
       </Fragment>
     );

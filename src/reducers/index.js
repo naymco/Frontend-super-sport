@@ -1,8 +1,8 @@
 import { combineReducers } from "redux";
-import Character from "./Character";
+import productDetails from "./ProductDetails";
 
 let reducers = combineReducers({
-  Character
+  productDetails
 });
 
 export default reducers;

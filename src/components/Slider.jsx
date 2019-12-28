@@ -7,9 +7,6 @@ class Slider extends Component {
       <div>
         <div id="slider" className="slider">
           <h1>Bienvenidos a SuperSport SS</h1>
-          <a href="/products" className="btn-slider">
-            Ir a Productos
-          </a>
         </div>
       </div>
     );

@@ -16,7 +16,9 @@ class gestorInvProd extends Component {
         stock: "",
         precio: "",
         nombreCategoria: "",
-        img_url: ""
+        img_url: "",
+        img_url_detalle1: "",
+        img_url_detalle2: ""
       },
       productos: []
     };
@@ -24,7 +26,7 @@ class gestorInvProd extends Component {
 
   componentDidMount() {
     axios
-      .get(`http://localhost:3001/productos`)
+      .get(`http://localhost:3001/products`)
       .then(items => {
         const productos = items.data;
         console.log(productos);
@@ -52,8 +54,9 @@ class gestorInvProd extends Component {
     console.log(products);
     ProductApi.newProduct(products)
       .then(res => {
+        console.log(res);
         alert("Producto creado correctamente");
-        this.setState({ productos: [...this.state.productos, res.producto] });
+        this.setState({ products: [...this.state.productos, res.producto] });
       })
       .catch(error => {
         console.error(error);
@@ -99,7 +102,9 @@ class gestorInvProd extends Component {
         stock: "",
         precio: "",
         nombreCategoria: "",
-        img_url: ""
+        img_url: "",
+        img_url_detalle1: "",
+        img_url_detalle2: ""
       }
     });
   };

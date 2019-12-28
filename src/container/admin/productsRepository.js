@@ -7,7 +7,7 @@ const getLocalToken = () => {
 };
 
 const productsRepository = () => {
-  let urlBack = "http://localhost:3001/productos";
+  let urlBack = "http://localhost:3001/products";
 
   const newProduct = product => {
     return new Promise((resol, rej) => {
@@ -20,7 +20,7 @@ const productsRepository = () => {
       });
 
       instance
-        .post("/addProduct", product)
+        .post("/nuevoProducto", product)
         .then(res => {
           resol(res.data);
         })
@@ -41,7 +41,7 @@ const productsRepository = () => {
         }
       });
       instance
-        .get("/productos", product)
+        .get("/products", product)
         .then(res => resol(res.data))
         .catch(error => {
           console.log(error);
