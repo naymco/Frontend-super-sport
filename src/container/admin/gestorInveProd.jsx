@@ -26,7 +26,7 @@ class gestorInvProd extends Component {
 
   componentDidMount() {
     axios
-      .get(`http://localhost:3001/products`)
+      .get(`http://localhost:3001/products/`)
       .then(items => {
         const productos = items.data;
         console.log(productos);
@@ -56,7 +56,7 @@ class gestorInvProd extends Component {
       .then(res => {
         console.log(res);
         alert("Producto creado correctamente");
-        this.setState({ products: [...this.state.productos, res.producto] });
+        this.setState({ products: [...this.state.productos, res.productos] });
       })
       .catch(error => {
         console.error(error);

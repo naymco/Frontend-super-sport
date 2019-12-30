@@ -13,29 +13,40 @@ class BarraBusqueda extends Component {
 
   componentDidMount() {
     axios
-      .get(`http://localhost:3001/products`)
+      .get(`http://localhost:3001/products/productos`)
       .then(items => {
         this.setState({ producto: items.data });
       })
       .catch(error => console.log(error));
   }
 
+
+
   onInputChange(event) {
     let busqueda = event.target.value;
     const data = this.state.producto;
-    console.log(data);
-    const newData = data.filter(item => {
-      const itemData = item.nombre.toUpperCase();
-      const inputData = busqueda.toUpperCase();
-      console.log(inputData);
+    // console.log(data);
+    const newData =  data.filter(item=> {
+      const itemData = item.nombre;
+      const inputData = busqueda;
+      // console.log(inputData);
       const busquedaFinal = itemData.indexOf(inputData) > -1;
       if (busquedaFinal === true) return busquedaFinal;
-      return console.log(busquedaFinal);
+      console.log(inputData)
+      // return busquedaFinal;
+      
     });
+    
     this.setState({
-      product: newData,
+      producto: newData,
       titulo: busqueda
     });
+  }
+
+  yepa() {
+    for (let productos of this.state.producto)
+     return productos.nombre
+      // console.log(productos.nombre)
   }
 
   render() {
@@ -48,8 +59,17 @@ class BarraBusqueda extends Component {
             value={this.state.titulo}
             onChange={text => this.onInputChange(text)}
           />
+          <div>
+            {this.yepa()}
+            {/* {this.state.producto?.map(item => {
+              return item.precio
+             })} */}
+          </div>
+         
+          {/* {this.state.producto} */}
+   
         </form>
-      </div>
+        </div >
     );
   }
 }

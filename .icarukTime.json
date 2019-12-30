@@ -1,16 +1,16 @@
 {
-    "idleHeartbeats": 6903,
-    "navigatingHeartbeats": 2853,
-    "totalCodingHeartbeats": 9416,
+    "idleHeartbeats": 7307,
+    "navigatingHeartbeats": 3011,
+    "totalCodingHeartbeats": 10140,
     "languageHeartbeats": {
         "javascript": 798,
-        "javascriptreact": 5862,
-        "css": 2756
+        "javascriptreact": 6434,
+        "css": 2908
     },
     "fileHeartbeats": {
         "src/store.js": 22,
         "src/container/productDetails.jsx": 994,
-        "src/container/App.jsx": 1130,
+        "src/container/App.jsx": 1143,
         "src/actions/ProductDetails.js": 216,
         "src/reducers/ProductDetails.js": 143,
         "src/index.js": 24,
@@ -18,15 +18,17 @@
         "src/assets/css/ProductDetails.css": 1559,
         "src/container/App.css": 620,
         "src/container/admin/productsForm.jsx": 154,
-        "src/container/admin/gestorInveProd.jsx": 174,
+        "src/container/admin/gestorInveProd.jsx": 186,
         "src/container/admin/css/gestorInvProd.css": 128,
         "src/assets/css/SignUp.css": 187,
         "src/container/SignUpPage.jsx": 36,
         "src/assets/css/Header.css": 67,
-        "src/components/Slider.jsx": 34,
+        "src/components/Slider.jsx": 568,
         "src/container/admin/productsRepository.js": 64,
         "src/container/authRepository.js": 28,
         "src/components/BarraBusqueda.jsx": 3340,
-        "src/assets/css/BarraBusqueda.css": 195
+        "src/assets/css/BarraBusqueda.css": 195,
+        "src/container/ProductosPorCategoria.jsx": 13,
+        "src/assets/css/Slider.css": 152
     }
 }

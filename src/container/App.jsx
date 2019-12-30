@@ -18,12 +18,57 @@ class App extends Component {
   }
   componentDidMount() {
     axios
-      .get(`http://localhost:3001/products`)
+      .get(`http://localhost:3001/products/`)
       .then(items => {
         const productos = items.data;
         this.setState({ productos });
       })
       .catch(error => console.log(error));
+  }
+
+  // onInputChange(event) {
+  //   let busqueda = event.target.value;
+  //   const data = this.state.producto;
+  //   // console.log(data);
+  //   const newData = data.filter(item => {
+  //     const itemData = item.nombre;
+  //     const inputData = busqueda;
+  //     // console.log(inputData);
+  //     const busquedaFinal = itemData.indexOf(inputData) > -1;
+  //     if (busquedaFinal === true) return busquedaFinal;
+  //     return busquedaFinal;
+  //   });
+  //   this.setState({
+  //     product: newData,
+  //     titulo: busqueda
+  //   });
+  // }
+
+  yepa() {
+    for (let producto of this.state.productos) return producto.precio;
+    // console.log(productos.nombre)
+  }
+
+  onInputChange(event) {
+    let busqueda = event.target.value;
+    const data = this.state.productos;
+    // console.log(data);
+    const newData = data.filter(item => {
+      const itemData = item.nombre;
+      const inputData = busqueda;
+      console.log(inputData);
+      const busquedaFinal = itemData.indexOf(inputData);
+      if (busquedaFinal === true)
+        // console.log(inputData)
+        return busquedaFinal;
+
+      // return busquedaFinal;
+    });
+
+    this.setState({
+      productos: newData,
+      titulo: busqueda
+    });
   }
 
   goToProductDetails = item => {
@@ -34,9 +79,27 @@ class App extends Component {
     return (
       <div>
         <Header />
-        <BarraBusqueda />
+        {/* <BarraBusqueda /> */}
         <Slider />
+
         <div className="container">
+          {/* onChange = {text => this.onInputChange(text)} */}
+          <form>
+            <input
+              type="text"
+              placeholder="Buscar"
+              value={this.state.titulo}
+              onChange={text => this.onInputChange(text)}
+            />
+            <div>
+              {this.yepa()}
+              {/* {this.state.producto?.map(item => {
+              return item.precio
+             })} */}
+            </div>
+
+            {/* {this.state.producto} */}
+          </form>
           {this.state.productos?.map(item => {
             return (
               <div key={item.id} className="items-productos">
