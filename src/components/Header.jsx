@@ -2,15 +2,13 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import "../assets/css/Header.css";
 import axios from "axios";
-import Select from 'react-select'
-
 
 class Header extends Component {
   constructor() {
-    super()
+    super();
     this.state = {
       categorias: []
-    }
+    };
   }
 
   componentDidMount() {
@@ -19,7 +17,7 @@ class Header extends Component {
       .then(items => {
         const categorias = items.data;
         this.setState({ categorias });
-        console.log(items.data)
+        // console.log(items.data)
       })
       .catch(error => console.log(error));
   }
@@ -45,15 +43,13 @@ class Header extends Component {
                 {this.state.categorias?.map(item => {
                   return (
                     <div key={item.id}>
-                      <select name='Categorias' className="Link">
+                      <select name="Categorias" className="Link">
                         <option value={item.nombre} selected></option>
                       </select>
                     </div>
-
-                  )
+                  );
                 })}
               </div>
-
             </li>
             <div className="regLogin">
               <li>

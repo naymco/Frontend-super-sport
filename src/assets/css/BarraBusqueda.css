@@ -1,10 +1,10 @@
-.buscador {
+.search-contenedor {
   background: #c4c3c3;
   margin-top: 50px;
   padding: 10px 120px;
 }
 
-.buscador input {
+.search-contenedor input {
   width: 100%;
   height: 30px;
   border-radius: 50px;
