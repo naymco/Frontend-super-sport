@@ -1,8 +1,27 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import "../assets/css/Header.css";
+import axios from "axios";
 
 class Header extends Component {
+  constructor() {
+    super();
+    this.state = {
+      categorias: []
+    };
+  }
+
+  componentDidMount() {
+    axios
+      .get(`http://localhost:3001/categories/categorias`)
+      .then(items => {
+        const categorias = items.data;
+        this.setState({ categorias });
+        // console.log(items.data)
+      })
+      .catch(error => console.log(error));
+  }
+
   render() {
     return (
       <div>
@@ -19,6 +38,19 @@ class Header extends Component {
               </Link>
             </li>
             <li>Contacto</li>
+            <li>
+              <div>
+                {this.state.categorias?.map(item => {
+                  return (
+                    <div key={item.id}>
+                      <select name="Categorias" className="Link">
+                        <option value={item.nombre} selected></option>
+                      </select>
+                    </div>
+                  );
+                })}
+              </div>
+            </li>
             <div className="regLogin">
               <li>
                 <Link to="/auth/register" className="Link">

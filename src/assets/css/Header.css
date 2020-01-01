@@ -7,6 +7,7 @@
   width: 100%;
   border-bottom: 2px solid #ff8a67;
   color: white;
+  z-index: 999;
 }
 .menu {
   display: flex;

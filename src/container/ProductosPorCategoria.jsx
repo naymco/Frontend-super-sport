@@ -1,15 +1,14 @@
 import React, { Component } from "react";
 import axios from "axios";
+import { setProductDetails } from "../actions/ProductDetails.js";
 
 import Header from "../components/Header.jsx";
 import Footer from "../components/Footer.jsx";
 import Slider from "../components/Slider.jsx";
-import BusquedaPage from "../components/search/BusquedaPage";
 
 import "./App.css";
-import { setProductDetails } from "../actions/ProductDetails.js";
 
-class App extends Component {
+class ProductosPorCategoria extends Component {
   constructor() {
     super();
     this.state = {
@@ -22,22 +21,16 @@ class App extends Component {
       .then(items => {
         const productos = items.data;
         this.setState({ productos });
+        console.log(items.data);
       })
       .catch(error => console.log(error));
   }
-
-  goToProductDetails = item => {
-    this.props.history.push(`/producto/${item.id}/${item.nombre}`);
-    setProductDetails(item);
-  };
 
   render() {
     return (
       <div>
         <Header />
-        <BusquedaPage />
         <Slider />
-
         <div className="container">
           {this.state.productos?.map(item => {
             return (
@@ -58,11 +51,15 @@ class App extends Component {
             );
           })}
         </div>
-
         <Footer />
       </div>
     );
   }
+
+  goToProductDetails = item => {
+    this.props.history.push(`/producto/${item.id}/${item.nombre}`);
+    setProductDetails(item);
+  };
 }
 
-export default App;
+export default ProductosPorCategoria;
