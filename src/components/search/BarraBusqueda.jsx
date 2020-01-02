@@ -1,5 +1,4 @@
 import React, { Fragment } from "react";
-import { Link } from "react-router-dom";
 
 export const BarraBusqueda = ({ onChange, onSubmit, search: { nombre } }) => (
   <Fragment>
@@ -11,8 +10,6 @@ export const BarraBusqueda = ({ onChange, onSubmit, search: { nombre } }) => (
         value={nombre}
         onChange={onChange}
       />
-
-      
 
       {/* <button className="btn-search" id="btn-search-id" >
         Seach

@@ -12,6 +12,10 @@
   background-size: cover;
 }
 
+.perfil-usuario {
+  background: red;
+}
+
 .form {
   display: block;
   align-items: center;

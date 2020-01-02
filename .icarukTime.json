@@ -1,11 +1,11 @@
 {
-    "idleHeartbeats": 12579,
-    "navigatingHeartbeats": 5397,
-    "totalCodingHeartbeats": 19196,
+    "idleHeartbeats": 16798,
+    "navigatingHeartbeats": 6632,
+    "totalCodingHeartbeats": 25534,
     "languageHeartbeats": {
-        "javascript": 2524,
-        "javascriptreact": 13728,
-        "css": 2934,
+        "javascript": 2546,
+        "javascriptreact": 19363,
+        "css": 3615,
         "plaintext": 10
     },
     "fileHeartbeats": {
@@ -21,23 +21,25 @@
         "src/container/admin/productsForm.jsx": 154,
         "src/container/admin/gestorInveProd.jsx": 186,
         "src/container/admin/css/gestorInvProd.css": 128,
-        "src/assets/css/SignUp.css": 187,
+        "src/assets/css/SignUp.css": 221,
         "src/container/SignUpPage.jsx": 36,
         "src/assets/css/Header.css": 67,
         "src/components/Slider.jsx": 579,
         "src/container/admin/productsRepository.js": 64,
-        "src/container/authRepository.js": 28,
+        "src/container/authRepository.js": 50,
         "src/components/BarraBusqueda.jsx": 3946,
-        "src/assets/css/BarraBusqueda.css": 211,
+        "src/assets/css/BarraBusqueda.css": 858,
         "src/container/ProductosPorCategoria.jsx": 13,
         "src/assets/css/Slider.css": 162,
         "e:\\CopiaSeguridadAlex\\CursoBootcamp\\front-react-ecommerce\\front-super-sport\\src\\assets\\css\\Slider.css.git": 10,
-        "src/components/search/BusquedaPage.jsx": 3444,
+        "src/components/search/BusquedaPage.jsx": 7308,
         "src/components/search/searchRepository.js": 1580,
         "src/components/Header.jsx": 22,
         "src/components/search/BarraBusqueda.jsx": 791,
         "e:\\CopiaSeguridadAlex\\CursoBootcamp\\front-react-ecommerce\\BackendSQLSuperSport-dev\\routes\\products.js": 43,
-        "src/components/search/searchRepository.jsx": 139,
-        "src/components/search/Buscar.jsx": 1670
+        "src/components/search/searchRepository.jsx": 389,
+        "src/components/search/Buscar.jsx": 1700,
+        "src/container/LoginPage.jsx": 1400,
+        "src/container/authRepository.jsx": 91
     }
 }
