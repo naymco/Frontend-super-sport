@@ -5,7 +5,7 @@ import AuthApi from "./authRepository";
 import Header from "../components/Header";
 
 import "../assets/css/SignUp.css";
-import { Redirect } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 class LoginPage extends Component {
   constructor(props) {
@@ -14,6 +14,8 @@ class LoginPage extends Component {
       user: {
         username: "",
         email: "",
+        nombre: "",
+        direccion: "",
         password: ""
       }
     };
@@ -33,8 +35,10 @@ class LoginPage extends Component {
       .then(res => {
         // alert("Usuario logueado correctamente");
         this.setState({
+          user: user,
           redirect: true
         });
+
       })
       .catch(error => {
         alert("Algo salio mal");
@@ -47,12 +51,19 @@ class LoginPage extends Component {
     if (userValid && this.state.redirect === true) {
       console.log(userValid.email);
       const user = JSON.parse(localStorage.getItem("users"));
+
       console.log(user.username);
       return (
-        <div>
-          <h1> Bienvenido {user.username} </h1>
-          <p> {user.direccion} </p>
-        </div>
+        <Fragment>
+          <Header />
+          <div className="redirect-profile">
+            <h1> Bienvenido {user.username} </h1>
+
+            <Link className="link" to={`/auth/${user.username}`}>
+              Ya puedes visitar tu perfil
+            </Link>
+          </div>
+        </Fragment>
       );
     } else {
       return (

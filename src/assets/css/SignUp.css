@@ -86,3 +86,32 @@ h1.title {
   text-align: center;
   border-bottom: 2px solid white;
 }
+
+.redirect-profile {
+  background: #1d1d1d;
+  color: white;
+  padding: 30px;
+  border-radius: 5px;
+  position: absolute;
+  top: 40%;
+  left: 35%;
+  box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.66);
+  text-align: center;
+}
+.redirect-profile h1 {
+  margin-bottom: 20px;
+}
+
+.link {
+  color: white;
+  text-decoration: none;
+  border: 2px solid white;
+  padding: 10px 30px;
+  border-radius: 50px;
+  margin: 50px auto;
+  transition: 0.5s;
+}
+
+.link:hover {
+  background: #17ae17;
+}

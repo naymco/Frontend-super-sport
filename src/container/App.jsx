@@ -10,8 +10,8 @@ import "./App.css";
 import { setProductDetails } from "../actions/ProductDetails.js";
 
 class App extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       productos: []
     };

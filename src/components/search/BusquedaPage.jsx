@@ -1,7 +1,6 @@
 import React, { Component, Fragment } from "react";
 
 import { BarraBusqueda } from "./BarraBusqueda";
-import Buscar from "./Buscar";
 import SearchRepository from "./searchRepository.jsx";
 
 import Header from "../Header";

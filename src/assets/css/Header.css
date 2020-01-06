@@ -23,8 +23,7 @@ nav li {
 .regLogin {
   list-style: none;
   display: flex;
-  width: 30%;
-  margin-left: auto;
+  margin-left: 50%;
 }
 
 .Link {

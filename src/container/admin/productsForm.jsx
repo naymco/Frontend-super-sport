@@ -4,7 +4,6 @@ export const ProductForm = ({
   onChange,
   onSubmit,
   onSubmitReset,
-  getAllProducts,
 
   products: {
     nombre,

@@ -1,0 +1,43 @@
+.profile {
+  background: #d7d7d7;
+  border-radius: 10px;
+  border: 2px solid #ff9778;
+  display: block;
+  margin: 100px 100px 0 100px;
+  align-items: center;
+}
+.profile-detalles {
+  display: flex;
+}
+.profile-detalles h2 {
+  background: #1b1b1b;
+  color: white;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  height: 60vh;
+}
+.profile h3 {
+  padding: 5px 20px;
+}
+
+.direccion {
+  background: white;
+  width: 30%;
+  border: 2px solid #ff9778;
+  border-radius: 10px;
+  padding: 30px;
+  margin: 20px;
+}
+.direccion p {
+  margin: 10px;
+}
+
+.pedidos {
+  background: white;
+  border: 2px solid #ff9778;
+  border-radius: 10px;
+  padding: 30px;
+  margin: 20px;
+  width: 40%;
+}

@@ -34,6 +34,7 @@ const authRepository = () => {
   };
 
   const signUp = user => {
+    const profileStore = "profile";
     return new Promise((resol, rej) => {
       const instance = axios.create({
         baseURL: urlBack,
@@ -44,7 +45,7 @@ const authRepository = () => {
       instance
         .post("register/", user)
         .then(res => {
-          localStorage.setItem(tokenName, JSON.stringify(res.data.key));
+          localStorage.setItem(profileStore, JSON.stringify(res.data.user));
           resol(res.data);
         })
         .catch(error => {
@@ -66,7 +67,7 @@ const authRepository = () => {
       instance
         .post("logout/", {})
         .then(res => {
-          localStorage.removeItem(tokenName, userStore);
+          localStorage.removeItem(tokenName);
           resol(res.data);
         })
         .catch(error => {
