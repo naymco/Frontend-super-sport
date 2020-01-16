@@ -10,6 +10,23 @@ Backend: en Nodejs y express
 Base de datos: MySQL
 Frontend: React
 
+## Screenshots
+
+Vista principal
+![](public/ecommerce-react-vista-principal.jpg)
+
+Vista detalles del producto
+![](public/ecommerce-react-vista-detalle-producto.jpg)
+
+Vista registro de usuario
+![](public/ecommerce-react-vista-registro.jpg)
+
+Vista login de usuario
+![](public/ecommerce-react-vista-login.jpg)
+
+Vista cesta de productos llena
+![](public/ecommerce-react-vista-cesta-compra.jpg)
+
 
 ### npm install
 
